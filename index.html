@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoGreen</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>GoGreen</h1>
+        <div class="img">
+            <img src="https://i0.wp.com/virtualvastra.org/wp-content/uploads/2020/07/VRNC-Logo-19032020.jpg?ssl=1" alt="vrnc" height="100" width="100" align="left">
+        </div>
+        <nav>
+            <button onclick="showAuditorLogin()">Auditor</button>
+            <button onclick="showAdminLogin()">Admin</button>
+            <button onclick="navigate('user.html')">User</button>
+            <button onclick="navigate('index.html')">Home</button>
+        </nav>
+    </header>
+    <div id="loginForm" style="display:none;">
+        <h2>Login</h2>
+        <input type="text" id="authString" placeholder="Enter authentication string">
+        <button id="submitLogin">Submit</button>
+        <button onclick="hideLoginForm()">Cancel</button>
+    </div>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>

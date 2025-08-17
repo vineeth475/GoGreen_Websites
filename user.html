@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - GoGreen</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>GoGreen</h1>
+        <h2>User Environmental Compliance Form</h2>
+        <div class="img">
+            <img src="https://i0.wp.com/virtualvastra.org/wp-content/uploads/2020/07/VRNC-Logo-19032020.jpg?ssl=1" 
+            alt="vrnc" height="100" width="100" align="left">
+            </div>
+        <nav>
+            <button onclick="showAuditorLogin()">Auditor</button>
+            <button onclick="showAdminLogin()">Admin</button>
+            <button onclick="navigate('user.html')">User</button>
+            <button onclick="navigate('index.html')">Home</button>
+        </nav>
+    </header>
+    <main>
+        <form id="userForm">
+            <div id="module1">
+                <h3>Module 1: Energy Efficiency</h3>
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName"><br>
+
+                <label for="description">Description of the Project:</label>
+                <input type="text" id="description" name="description"><br>
+
+                <label for="energy_saving">Type of Energy saving for the project:</label>
+                <input type="text" id="energy_saving" name="energy_saving"><br>
+
+                <label for="savings">Estimated Energy savings in kWh:</label>
+                <input type="number" id="savings" name="savings"><br>
+
+                <label for="investments">Investments in the project:</label>
+                <input type="number" id="investments" name="investments"><br>
+
+                <label for="photo">Include any image of the project:</label>
+                <input type="file" accept="image/*" name="photo" id="photo"><br>
+
+                <label for="projectCost">Project Cost:</label>
+                <input type="number" id="projectCost" name="projectCost"><br>
+
+                <button type="button" id="addProject">Add Another Project</button>
+            </div>
+            <div id="module2">
+                <h3>Module 2: Project Information</h3>
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName"><br>
+
+                <label for="description">Description of the Project:</label>
+                <input type="text" id="description" name="description"><br>
+
+                <label for="energy_saving">Type of Water saving for the project:</label>
+                <input type="text" id="energy_saving" name="energy_saving"><br>
+
+                <label for="savings">Estimated Water savings in kWh:</label>
+                <input type="number" id="savings" name="savings"><br>
+
+                <label for="photo">Include any image of the project:</label>
+                <input type="file" accept="image/*" name="photo" id="photo"><br>
+
+                <label for="projectCost">Project Cost:</label>
+                <input type="number" id="projectCost" name="projectCost"><br>
+
+
+                <button type="button1" id="addProject">Add Another Project</button>
+                <!-- Add your questions here -->
+            </div>
+            <div id="module3">
+                <h3>Module 3: Renewable Energy</h3>
+                <label for="projectNameRenewable">Project Name:</label>
+                <input type="text" id="projectNameRenewable" name="projectNameRenewable"><br>
+            
+                <label for="proofCommitment">Proof of commitment and target-setting from top management in terms of utilizing renewable energy:</label>
+                <input type="text" id="proofCommitment" name="proofCommitment"><br>
+            
+                <label for="projectsPlanned">Projects planned for renewable energy and their financial allocation statements:</label>
+                <input type="text" id="projectsPlanned" name="projectsPlanned"><br>
+            
+                <label for="energySources">Report on sources of energy (If energy is purchased from external agencies, any proofs that they are green):</label>
+                <input type="text" id="energySources" name="energySources"><br>
+            
+                <button type="button2" id="addRenewableProject">Add Another Project</button>
+            </div>
+            <div id="module4">
+                <h3>Module 4: Green House Gases</h3>
+                <label for="projectNameGHG">Project Name:</label>
+                <input type="text" id="projectNameGHG" name="projectNameGHG"><br>
+            
+                <label for="directEmissions">Report on direct emissions by the company for the last three years:</label>
+                <input type="text" id="directEmissions" name="directEmissions"><br>
+            
+                <label for="indirectEmissions">Report on indirect emissions from transport, raw material, etc.:</label>
+                <input type="text" id="indirectEmissions" name="indirectEmissions"><br>
+            
+                <label for="ghgReduction">Report on reduction in GHG emissions and list of GHG reduction projects implemented in the last three years including the financial allocations for them and the completion status:</label>
+                <input type="text" id="ghgReduction" name="ghgReduction"><br>
+            
+                <button type="button3" id="addGHGProject">Add Another Project</button>
+            </div>
+            
+            <div id="module5">
+                <h3>Module 5: Waste Management</h3>
+                <label for="projectNameWaste">Project Name:</label>
+                <input type="text" id="projectNameWaste" name="projectNameWaste"><br>
+            
+                <label for="incentivisationReport">Report on incentivisation of hazardous and non-hazardous wastes:</label>
+                <input type="text" id="incentivisationReport" name="incentivisationReport"><br>
+            
+                <label for="wasteSegregation">Photo and testimonial proofs of waste segregation at source and colour-coding of bins:</label>
+                <input type="text" id="wasteSegregation" name="wasteSegregation"><br>
+            
+                <label for="wasteDisposal">Document highlighting the waste disposal facilities, details of the staff dedicated to the maintenance of these facilities and descriptive details about the storage facilities:</label>
+                <input type="text" id="wasteDisposal" name="wasteDisposal"><br>
+            
+                <label for="trainingProofs">Proofs for training/awareness programs organised (if any) about waste management:</label>
+                <input type="file" accept="image/*" name="trainingProofs" id="trainingProofs"><br>
+            
+                <label for="hazardousWasteReduction">Report on hazardous waste generation for the last three years and the list of projects implemented to reduce hazardous waste generation with photo proofs and financial allocation statements:</label>
+                <input type="number" id="hazardousWasteReduction" name="hazardousWasteReduction"><br>
+            
+                <label for="nonHazardousWasteDetails">Details with proofs about how the non-hazardous waste was dealt with:</label>
+                <input type="file" accept="image/*" name="nonHazardousWasteDetails" id="nonHazardousWasteDetails"><br>
+            
+                <label for="effluentGeneration">Effluent generation report:</label>
+                <input type="number" id="effluentGeneration" name="effluentGeneration"><br>
+            
+                <label for="stpInstallation">Details about STP or ETP installation including the purchase and installation documents:</label>
+                <input type="number" id="stpInstallation" name="stpInstallation"><br>
+            
+                <label for="emissionMonitoring">Proof of emission monitoring system and stack emission details:</label>
+                <input type="number" id="emissionMonitoring" name="emissionMonitoring"><br>
+            
+                <label for="manufacturingEmissions">Report on emissions and their analysis from the manufacturing processes:</label>
+                <input type="number" id="manufacturingEmissions" name="manufacturingEmissions"><br>
+            
+                <button type="button4" id="addWasteProject">Add Another Project</button>
+            </div>
+            
+
+            <div id="module6">
+                <h3>Module 6: Material Conservation, Recycling & Recyclability</h3>
+                <label for="projectNameMaterial">Project Name:</label>
+                <input type="text" id="projectNameMaterial" name="projectNameMaterial"><br>
+            
+                <label for="trainingPrograms">Proofs of training programs, environment day celebrations and measures to increase awareness about 3 R's:</label>
+                <input type="text" id="trainingPrograms" name="trainingPrograms"><br>
+            
+                <label for="materialManagement">Details about material management and conservation systems:</label>
+                <input type="text" id="materialManagement" name="materialManagement"><br>
+            
+                <label for="wasteProcessing">Details of projects and financial allocations to processing of waste:</label>
+                <input type="number" id="wasteProcessing" name="wasteProcessing"><br>
+            
+                <label for="recycledMaterialUse">Measures taken to increase the use of recycled material as a substitute to virgin material:</label>
+                <input type="number" id="recycledMaterialUse" name="recycledMaterialUse"><br>
+            
+                <label for="consumablesReduction">Report on reduction in consumables like paper, lube oil, etc.:</label>
+                <input type="number" id="consumablesReduction" name="consumablesReduction"><br>
+            
+                <label for="packagingMaterialReduction">Details of projects taken to reduce packaging material in the last three years:</label>
+                <input type="number" id="packagingMaterialReduction" name="packagingMaterialReduction"><br>
+            
+                <label for="packagingMaterialReuse">Reports and financial allocation statements for projects on packaging material utilisation and reuse initiatives:</label>
+                <input type="number" id="packagingMaterialReuse" name="packagingMaterialReuse"><br>
+            
+                <button type="button5" id="addMaterialProject">Add Another Project</button>
+            </div>
+            
+
+            <div id="module7">
+                <h3>Module 7: Green Supply Chain</h3>
+                <label for="projectNameSupplyChain">Project Name:</label>
+                <input type="text" id="projectNameSupplyChain" name="projectNameSupplyChain"><br>
+            
+                <label for="awarenessPrograms">Details of Awareness Programs Conducted (if any):</label>
+                <input type="text" id="awarenessPrograms" name="awarenessPrograms"><br>
+            
+                <label for="supplierAudits">Report on Supplier audits along with sample audits:</label>
+                <input type="text" id="supplierAudits" name="supplierAudits"><br>
+            
+                <label for="greenProcurement">Details of green procurement and should follows guidelines:</label>
+                <input type="number" id="greenProcurement" name="greenProcurement"><br>
+            
+                <label for="packagingEfficiency">Report on measures taken to reduce packaging material and increase packaging efficiency of materials received from the supplier-delivered goods:</label>
+                <input type="number" id="packagingEfficiency" name="packagingEfficiency"><br>
+            
+                <label for="logisticsEfficiency">Proofs of initiatives taken to enhance logistics efficiency and to minimize GHG impact in supply chain:</label>
+                <input type="number" id="logisticsEfficiency" name="logisticsEfficiency"><br>
+            
+                <button type="button6" id="addSupplyChainProject">Add Another Project</button>
+            </div>
+            
+
+            <div id="module8">
+                <h3>Module 8: Green Infrastructure and Ecology</h3>
+                <label for="projectNameInfrastructure">Project Name:</label>
+                <input type="text" id="projectNameInfrastructure" name="projectNameInfrastructure"><br>
+
+                <label for="cleanlinessPhotos">Photos and testimonials (with their details) about the overall cleanliness of the premises:</label>
+                <input type="text" id="cleanlinessPhotos" name="cleanlinessPhotos"><br>
+
+                <label for="lightingProofs">Proofs of sufficient lighting and complying with government norms for the same:</label>
+                <input type="text" id="lightingProofs" name="lightingProofs"><br>
+
+                <label for="workingConditions">Proofs of ideal working conditions for people to work in, considering the seating arrangements, space, etc., providing testimonials from workers (include their details):</label>
+                <input type="number" id="workingConditions" name="workingConditions"><br>
+
+                <label for="accidentReporting">Documents to support effective accident reporting systems with some sample case documents and actions taken:</label>
+                <input type="number" id="accidentReporting" name="accidentReporting"><br>
+
+                <label for="ppeAvailability">Documents supporting proper availability and usage of personal protective equipment (PPE), bills showing timely purchase of PPEs and availability of first-aid mechanisms:</label>
+                <input type="number" id="ppeAvailability" name="ppeAvailability"><br>
+
+                <label for="safetyMeasures">List of safety measures (type of Equipment) taken on building:</label>
+                <input type="text" id="safetyMeasures" name="safetyMeasures"><br>
+                <button type="button7" id="addSupplyChainProject">Add Another Project</button>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+
+    
+
+    <script src="js/index.js"></script>
+    <script src="js/user.js"></script>
+</body>
+</html>
